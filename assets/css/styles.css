@@ -12,8 +12,12 @@ body {
   font-weight: 400;
   line-height: 1.75;
   margin: 0 auto;
-  max-width: 1440px;
-  width: 80%;
+  /* max-width: 1440px; */
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* ----- Fonts ----- */
@@ -71,8 +75,7 @@ h3 {
     background-image: url("/assets/images/desktop/image-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 45vh;
-    max-height: 500px;
+    height: 500px;
 }
 
 .art-img {
@@ -204,12 +207,14 @@ article {
 /* ----- Footer ----- */
 
 footer {
+    background-color: hsl(0, 0%, 0%);
+}
+
+.footer {
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
     padding: 2em 0;
-    background-color: hsl(0, 0%, 0%);
-    max-width: 100%;
 }
 
 /* ----- Links ----- */
@@ -235,7 +240,7 @@ a {
 
 .grid-main {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(270px, 1fr));
     grid-template-rows: repeat(2, 450px);
     gap: 25px;
     justify-self: stretch;
@@ -245,7 +250,8 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
-    /* align-self: stretch; */
+    align-self: stretch;
+    /* background-position: ; */
 
 }
 
@@ -264,6 +270,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     padding-right: 1rem;
+    width: 50%;
     
 }
 
