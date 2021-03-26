@@ -111,6 +111,15 @@ h3 {
     position: relative;
 }
 
+.appear {
+    display: none;
+    width: fit-content;
+    margin-top: 2rem;
+}
+
+.disappear {
+    display: block;
+}
 
 /* ----- Semantic Elements ----- */
 
@@ -138,6 +147,34 @@ li {
     cursor: default;
     pointer-events: none;
     display: none;
+    background: none;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+#burgerMenu {
+    position: fixed;
+    z-index: 10;
+    height: 0;
+    top: -18%;
+    left: 0;
+    background-color: rgb(0,0,0);
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin-top: 0;
+}
+  
+.overlay-content {
+    display: flex;
+    align-items: flex-start;
+    margin: 4rem 0;
+    text-align: left;
+    flex-direction: column;
+}
+  
+#burgerMenu a {
+    font-size: 2rem;
+    transition: 0.3s;
 }
 
 /* ----- Section ----- */
@@ -269,10 +306,6 @@ a:hover {
     z-index: 2;
 }
 
-.grid-item:hover {
-   /* background-color: rgba(0, 0, 0, 0.4); */
-}
-
 /* ----- Container ----- */
 
 .container {
@@ -281,7 +314,6 @@ a:hover {
     justify-content: space-between;
     padding-right: 1rem;
     width: 50%;
-    
 }
 
 .container img{
@@ -291,4 +323,87 @@ a:hover {
 
 .right {
     text-align: right;
+}
+
+@media screen and (max-width: 1100px) {
+    .wrapper {
+        width: 90%;
+    }
+    /* ----- Hero ----- */
+    .navBtn {
+        cursor: pointer;
+        pointer-events: visible;
+        display: block;
+    }
+    .hero {
+        background-image: url("../images/mobile/image-hero.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 90vh;
+        max-height: 650px;
+    }
+    /* ----- Typography ----- */
+    h1 {
+        padding: 1rem;
+        margin: 8rem 0;
+        font-size: 3rem;
+    }
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+    /* ----- Misc. Positions ----- */
+    .margin-4x {
+        margin-bottom: 1rem;
+    }
+    .appear {
+        display: block;
+    }
+    .disappear {
+        display: none;
+    }
+    /* ----- Section ----- */
+    section {
+        margin: 6rem 0;
+    }
+    /* ----- Article ----- */
+    article {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        padding: 0;
+    }
+    .art-img {
+        max-width: 100%;
+        padding-bottom: 2rem;
+    }
+    /* ----- Footer ----- */
+    .footer {
+        flex-direction: column;
+    }
+    .container {
+        align-items: center;
+        text-align: center;
+        padding-right: 0;
+        width: 100%;
+    }
+    .column li{
+        width: 100%;
+    }
+    .container img{
+        max-width: 50%;
+        padding: 1rem;
+    }
+    .right {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    /* ----- Grid ----- */
+    .grid-main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .grid-item::after {
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+    }
 }

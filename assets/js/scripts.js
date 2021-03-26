@@ -1,8 +1,7 @@
-function toggleBurgerMenu() {
-    var x = document.getElementsByTagName("nav")[0];
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
+function openNav() {
+    document.getElementById("burgerMenu").style.height = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("burgerMenu").style.height = "0%";
+  }
